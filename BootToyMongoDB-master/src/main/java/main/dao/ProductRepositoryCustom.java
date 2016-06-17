@@ -7,5 +7,5 @@ import java.util.List;
 
 
 public interface ProductRepositoryCustom {
-    public List<TopLevelCountReport> findBySkuOnlyAvailablesCustom(String sku);
+    public List<String> findBySkuOnlyAvailablesCustom(String sku);
 }

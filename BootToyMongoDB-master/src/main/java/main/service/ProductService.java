@@ -26,17 +26,9 @@ public class ProductService {
 	
     @Autowired
     private ProductRepository repository;
-    
    
-    public List<Product> getContainerUniqueId(String name){
-        return repository.findByContainerUniqueId(name);
-    }
-    
-    public List<Product> getAvailableSku(String sku){
-        return repository.findBySkuOnlyAvailables(sku);
-    }
 
-    public List<TopLevelCountReport> getAvailableSkuCustom(String sku){
+    public List<String> getAvailableSkuCustom(String sku){
         return repository.findBySkuOnlyAvailablesCustom(sku);
     }
     

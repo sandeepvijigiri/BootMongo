@@ -1,7 +1,6 @@
 package main;
 
-import main.model.Product;
-import main.model.TopLevelCountReport;
+
 import main.service.ProductService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,12 +24,9 @@ public class BootMongoDB implements CommandLineRunner {
     private static final Logger logger = LoggerFactory.getLogger(BootMongoDB.class);
 
     public void run(String... args) throws Exception {
-    	System.out.println("Enter in Run"); 
-    	List<Product> name = productService.getContainerUniqueId("9005");
-    	System.out.println("name===="+name);
-    	List<TopLevelCountReport> availableSkuCustom = productService.getAvailableSkuCustom("9502");
-    	System.out.println("result ===="+availableSkuCustom);
-        logger.info("result of getName is {}", name);
+    	
+    	List<String> availableSkuCustom = productService.getAvailableSkuCustom("9502");
+    	logger.info("result of getName is {}", availableSkuCustom );
         }
 
     public static void main(String[] args) throws Exception {

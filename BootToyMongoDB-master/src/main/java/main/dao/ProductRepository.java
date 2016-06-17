@@ -19,12 +19,5 @@ import java.util.List;
 // Table 5.1. Supported keywords for query methods
 // http://docs.spring.io/spring-data/data-mongodb/docs/current/reference/html/mongo.repositories.html
 public interface ProductRepository extends MongoRepository<Product, String> , ProductRepositoryCustom{
-	
-	public List<Product> findByContainerUniqueId(String name);
-	   
-	 	@Query(value = "{ContainerUniqueId: ?0}")
-	    public List<Product> findBySkuOnlyAvailables(String name);	     
-	 
-	   
 	   
 }
